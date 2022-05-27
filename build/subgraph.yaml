@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: IniteNFT
@@ -19,7 +19,7 @@ dataSources:
         - Transfer
       abis:
         - name: IniteNFT
-          file: ./abis/IniteNFT.json
+          file: IniteNFT/abis/IniteNFT.json
       eventHandlers:
         - event: Approval(indexed address,indexed address,indexed uint256)
           handler: handleApproval
@@ -29,4 +29,4 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
-      file: ./src/mapping.ts
+      file: IniteNFT/IniteNFT.wasm
